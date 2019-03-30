@@ -1,13 +1,11 @@
-import React, { Component } from 'react';
-import './App.css';
+import React from "react";
+import "./App.css";
+import ThumbnailContainer from "./component/ThumbnailContainer";
 
-class App extends Component {
-  render() {
-    return (
-      <div>
-      </div>
-    );
-  }
-}
+function App() {
+  return (
+    <ThumbnailContainer />
+  );
+};
 
 export default App;
