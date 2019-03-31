@@ -29,3 +29,30 @@ h3 {
 h5 {
     color: navy;
 }
+
+/* Media queries to make the grid responsive */
+@media only screen and (max-width: 770px) {
+    .thumbnail-container {
+        width: 500px;
+        justify-content: flex-start;
+    }
+    
+    .thumbnail {
+        flex: none;
+    }
+
+  .modal-dialog {
+      display: block;
+  }
+
+  .modal-body {
+    overflow-y: auto;    
+    overflow-x: auto;
+  }
+}
+
+  @media only screen and (max-width: 415px) {
+    .thumbnail-container {
+        width: 350px;
+    }
+  }
