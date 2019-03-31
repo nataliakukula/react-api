@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Container } from 'reactstrap';
+import { Container, Jumbotron } from 'reactstrap';
 import Modal from "../Modal";
 import API from "../../utils/API"
 
@@ -24,6 +24,7 @@ class ThumbnailContainer extends Component {
 
     render() {
         return (<Container>
+            <Jumbotron><h3>Click on the image to add a description!</h3></Jumbotron>
             <Modal images={this.state.images}></Modal>
         </Container>)
     };
