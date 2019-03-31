@@ -1,9 +1,17 @@
-# Label Insight coding test
+# Label Insight coding challenge:
 
-I focused on solving the problem, therefore I didn't pay mych attention to styling and the bonus tasks.
-<hr>
-I imported axios for the AJAX calls, since fetch doesn't comply with IE.
-<hr>
-For the modal problem, I used the ReactStrap library, to create a bootstrap component.
-<hr>
-I used css flexbox to arrange the thumbnails.
+Single page JavaScript Front End application built around an image API and thumbnails activating modals.
+### Run with:
+
+``
+npm i
+``
+<br/>
+``
+npm start
+``
+
+### Built with:
+- *React.js*
+- *Reactstrap*
+- *Axios*
