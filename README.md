@@ -1,4 +1,4 @@
-# Label Insight coding challenge:
+# ReactStrap Modal implementation
 
 Single page JavaScript Front End application built around an image API and thumbnails activating modals.
 ### Run with:
