@@ -82,7 +82,9 @@ class myModal extends Component {
         />))}
 
       <Modal isOpen={this.state.modal} toggle={this.toggle} className="my-modal">
-        <ModalHeader toggle={(event) => { this.toggle(); this.removeDescription(event) }}>{this.state.title}</ModalHeader>
+        <ModalHeader
+          toggle={(event) => { this.toggle(); this.removeDescription(event) }}
+        >{this.state.title}</ModalHeader>
         <ModalBody>
           <img src={this.state.imageUrl} alt="modal-img" />
         </ModalBody>
@@ -102,8 +104,14 @@ class myModal extends Component {
           </Form>
         </ModalBody>
         <ModalFooter>
-          <Button color="primary" onClick={(event) => { this.toggle(); this.submitDescription(event); this.removeDescription(event) }}>Save</Button>
-          <Button color="secondary" onClick={(event) => { this.toggle(); this.removeDescription(event) }}>Cancel</Button>
+          <Button
+            color="primary"
+            onClick={(event) => { this.toggle(); this.submitDescription(event); this.removeDescription(event) }}
+          >Save</Button>
+          <Button
+            color="secondary"
+            onClick={(event) => { this.toggle(); this.removeDescription(event) }}
+          >Cancel</Button>
         </ModalFooter>
       </Modal>
     </div>);
