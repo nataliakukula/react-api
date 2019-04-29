@@ -22,20 +22,16 @@ class myModal extends Component {
   }
 
   //Display data based on the tumbnail click
-  handleThumbnailClick = id => {
-    let imageUrl;
-    let title;
+  handleThumbnailClick = (thumbnailData) => {
 
-    for (let i = 0; i < this.props.images.length; i++) {
-      if (this.props.images[i].id === id) {
-        imageUrl = this.props.images[i].url;
-        title = this.props.images[i].title;
-        //Retrieve the description based on the id from local storage
-        localStorage.getItem(this.props.images[i].id) && this.setState({
-          "description": localStorage.getItem(this.props.images[i].id)
-        });
-      };
-    };
+    let id = thumbnailData.id;
+    let imageUrl = thumbnailData.url;
+    let title = thumbnailData.title;
+
+    //Retrieve the description based on the id from local storage
+    localStorage.getItem(id) && this.setState({
+      "description": localStorage.getItem(id)
+    });
 
     this.setState({
       id,
@@ -74,9 +70,8 @@ class myModal extends Component {
 
       {this.props.images.map((thumbnail, i) => (
         <Thumbnail
+          thumbnail={thumbnail}
           key={i}
-          src={thumbnail.thumbnailUrl}
-          id={i + 1}
           toggle={this.toggle}
           handleThumbnailClick={this.handleThumbnailClick}
         />))}
